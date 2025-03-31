@@ -259,7 +259,7 @@ export default function BookingForm({ trip, property, onBookingCreated }: Bookin
             <Button
               type="submit"
               size="lg"
-              className="w-full md:w-auto text-xl py-6 px-8 bg-secondary hover:bg-secondary-dark text-white font-bold"
+              className="w-full md:w-auto text-xl py-6 px-8 bg-yellow-400 hover:bg-yellow-500 text-primary font-bold shadow-lg"
               disabled={bookingMutation.isPending || !isTripAvailable}
             >
               {bookingMutation.isPending ? (

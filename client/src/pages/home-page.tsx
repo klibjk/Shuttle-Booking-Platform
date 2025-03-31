@@ -27,7 +27,7 @@ export default function HomePage() {
           <div className="flex items-center gap-4">
             {/* Test menu - ONLY for development */}
             <Link href="/admin">
-              <Button variant="secondary" className="font-semibold flex items-center text-white bg-secondary hover:bg-secondary/80 shadow-md">
+              <Button className="font-semibold flex items-center bg-white text-primary hover:bg-gray-100 shadow-md">
                 <Settings className="h-4 w-4 mr-2" />
                 Admin Dashboard
               </Button>
@@ -85,7 +85,7 @@ export default function HomePage() {
                 <div className="flex flex-wrap justify-center gap-4">
                   {properties && properties.length > 0 && (
                     <Link href={`/book/${properties[0].slug}`}>
-                      <Button size="lg" className="text-lg px-8 py-6 bg-secondary hover:bg-secondary-dark text-white font-bold">
+                      <Button size="lg" className="text-lg px-8 py-6 bg-yellow-400 hover:bg-yellow-500 text-primary font-bold shadow-lg">
                         Book Your Trip Now
                         <ChevronRight className="ml-2 h-5 w-5" />
                       </Button>
@@ -184,7 +184,7 @@ export default function HomePage() {
                       
                       <div className="flex gap-2">
                         <Link href={`/book/${property.slug}`} className="flex-1">
-                          <Button className="w-full">
+                          <Button className="w-full bg-yellow-400 hover:bg-yellow-500 text-primary font-bold">
                             Book a Trip
                             <ChevronRight className="h-4 w-4 ml-2" />
                           </Button>
@@ -203,7 +203,7 @@ export default function HomePage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {properties?.map((property) => (
                   <Link key={property.id} href={`/book/${property.slug}`}>
-                    <Button variant="outline" className="w-full">
+                    <Button variant="outline" className="w-full text-primary font-semibold hover:bg-primary-50 border-primary">
                       {property.name} QR Link
                     </Button>
                   </Link>
