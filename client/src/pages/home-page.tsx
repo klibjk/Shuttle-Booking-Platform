@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import Footer from "@/components/layout/footer";
 import { MapPin, CalendarDays, Bus, ChevronRight, LogOut, User, Settings } from "lucide-react";
 import { BusIcon, CasinoIcon, SeniorIcon } from "@/components/ui/icons";
+import casinoBusImage from "../assets/casino-bus.png";
 
 export default function HomePage() {
   const { user, logoutMutation } = useAuth();
@@ -61,28 +62,41 @@ export default function HomePage() {
 
       <main className="flex-grow">
         {/* Hero section */}
-        <section className="bg-gradient-to-b from-primary-dark to-primary py-20 text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-5xl font-bold mb-6">Luxury Casino Shuttle Service</h2>
-              <p className="text-xl mb-8">
-                Comfortable, convenient transportation from your active adult community 
-                to your favorite casino destinations in Georgia and North Carolina.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                {properties && properties.length > 0 && (
-                  <Link href={`/book/${properties[0].slug}`}>
-                    <Button size="lg" className="text-lg px-8 py-6 bg-secondary hover:bg-secondary-dark">
-                      Book Your Trip Now
-                      <ChevronRight className="ml-2 h-5 w-5" />
+        <section className="relative">
+          {/* Background image */}
+          <div className="absolute inset-0 bg-gradient-to-b from-primary-dark to-primary opacity-80"></div>
+          <div className="w-full h-[500px] relative">
+            <img 
+              src={casinoBusImage} 
+              alt="Peach State Casino Express Bus" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+          
+          {/* Content overlay */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="container mx-auto px-4">
+              <div className="max-w-3xl mx-auto text-center text-white">
+                <h2 className="text-5xl font-bold mb-6 drop-shadow-lg">Luxury Casino Shuttle Service</h2>
+                <p className="text-xl mb-8 drop-shadow-md">
+                  Comfortable, convenient transportation from your active adult community 
+                  to your favorite casino destinations in Georgia and North Carolina.
+                </p>
+                <div className="flex flex-wrap justify-center gap-4">
+                  {properties && properties.length > 0 && (
+                    <Link href={`/book/${properties[0].slug}`}>
+                      <Button size="lg" className="text-lg px-8 py-6 bg-secondary hover:bg-secondary-dark text-white font-bold">
+                        Book Your Trip Now
+                        <ChevronRight className="ml-2 h-5 w-5" />
+                      </Button>
+                    </Link>
+                  )}
+                  <a href="#communities">
+                    <Button variant="outline" size="lg" className="text-lg px-8 py-6 border-white text-white font-bold hover:bg-white/20">
+                      View Communities
                     </Button>
-                  </Link>
-                )}
-                <a href="#communities">
-                  <Button variant="outline" size="lg" className="text-lg px-8 py-6 border-white text-white hover:bg-white/10">
-                    View Communities
-                  </Button>
-                </a>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

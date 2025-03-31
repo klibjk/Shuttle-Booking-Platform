@@ -36,33 +36,33 @@ export default function Footer() {
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/">
-                  <a className="hover:text-secondary transition-colors duration-200">Home</a>
+                <Link href="/" className="hover:text-secondary transition-colors duration-200">
+                  Home
                 </Link>
               </li>
               <li>
-                <Link href="#">
-                  <a className="hover:text-secondary transition-colors duration-200">FAQ</a>
+                <Link href="#" className="hover:text-secondary transition-colors duration-200">
+                  FAQ
                 </Link>
               </li>
               <li>
-                <Link href="#">
-                  <a className="hover:text-secondary transition-colors duration-200">Terms & Conditions</a>
+                <Link href="#" className="hover:text-secondary transition-colors duration-200">
+                  Terms & Conditions
                 </Link>
               </li>
               <li>
-                <Link href="#">
-                  <a className="hover:text-secondary transition-colors duration-200">Privacy Policy</a>
+                <Link href="#" className="hover:text-secondary transition-colors duration-200">
+                  Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="#">
-                  <a className="hover:text-secondary transition-colors duration-200">Cancellation Policy</a>
+                <Link href="#" className="hover:text-secondary transition-colors duration-200">
+                  Cancellation Policy
                 </Link>
               </li>
               <li>
-                <Link href="/auth">
-                  <a className="hover:text-secondary transition-colors duration-200">Admin Login</a>
+                <Link href="/auth" className="hover:text-secondary transition-colors duration-200">
+                  Admin Login
                 </Link>
               </li>
             </ul>

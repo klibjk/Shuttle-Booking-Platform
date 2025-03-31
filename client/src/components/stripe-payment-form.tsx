@@ -99,7 +99,7 @@ export function StripePaymentForm({ onSuccess }: StripePaymentFormProps) {
           <Button 
             type="submit" 
             disabled={!stripe || isProcessing || paymentStatus === "success"}
-            className="text-lg py-6 px-8 bg-secondary hover:bg-secondary-dark"
+            className="text-lg py-6 px-8 bg-secondary hover:bg-secondary-dark text-white font-bold"
           >
             {isProcessing ? (
               <>
