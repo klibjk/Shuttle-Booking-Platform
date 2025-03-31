@@ -102,7 +102,7 @@ export default function HomePage() {
         </section>
 
         {/* Features section */}
-        <section className="py-16 bg-champagne">
+        <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <h3 className="text-3xl font-bold text-center text-navy mb-12">Why Choose Our Service</h3>
             
@@ -162,7 +162,7 @@ export default function HomePage() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {properties?.map((property) => (
                   <Card key={property.id} className="border-2 hover:border-gold shadow-md hover:shadow-lg transition-all">
-                    <CardHeader className="pb-2 bg-navy/5">
+                    <CardHeader className="pb-2 border-b bg-gradient-to-r from-gold/10 to-white">
                       <CardTitle className="text-xl font-bold text-navy">{property.name}</CardTitle>
                     </CardHeader>
                     <CardContent className="pt-2">
@@ -196,7 +196,7 @@ export default function HomePage() {
             )}
             
             {/* For testing: Direct QR scan simulation */}
-            <div className="mt-12 p-6 border-2 border-dashed border-navy/30 rounded-lg bg-navy/5">
+            <div className="mt-12 p-6 border-2 border-dashed border-gold/40 rounded-lg bg-gradient-to-r from-gold/5 to-white">
               <h4 className="text-xl font-bold mb-4 text-center text-navy">Testing: Direct QR Code Links</h4>
               <p className="text-center mb-6 text-navy/70">These links simulate the QR codes that seniors would scan at their communities</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
