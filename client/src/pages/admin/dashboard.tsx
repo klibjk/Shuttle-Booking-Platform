@@ -7,6 +7,7 @@ import { useAuth } from "@/hooks/use-auth";
 import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis, Tooltip } from "recharts";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { IconButton } from "@/components/ui/icons";
+import { Footer } from "@/components/layout/footer";
 import { format } from "date-fns";
 import { 
   Bus, 
@@ -55,7 +56,8 @@ export default function AdminDashboard() {
   ];
   
   return (
-    <div className="min-h-screen flex">
+    <div className="min-h-screen flex flex-col">
+      <div className="flex-1 flex">
       {/* Sidebar */}
       <div className="w-64 bg-sidebar border-r border-sidebar-border hidden md:block">
         <div className="p-4">
@@ -253,6 +255,9 @@ export default function AdminDashboard() {
           </Card>
         </main>
       </div>
+      </div>
+      
+      <Footer />
     </div>
   );
 }

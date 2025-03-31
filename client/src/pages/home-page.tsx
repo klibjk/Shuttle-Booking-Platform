@@ -51,7 +51,7 @@ export default function HomePage() {
               </div>
             ) : (
               <Link href="/auth">
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-semibold">
+                <Button className="bg-white text-primary hover:bg-gray-100 font-semibold shadow-md">
                   Login
                 </Button>
               </Link>
@@ -92,7 +92,7 @@ export default function HomePage() {
                     </Link>
                   )}
                   <a href="#communities">
-                    <Button variant="outline" size="lg" className="text-lg px-8 py-6 border-white text-white font-bold hover:bg-white hover:text-primary shadow-lg">
+                    <Button size="lg" className="text-lg px-8 py-6 bg-white text-primary font-bold hover:bg-gray-100 shadow-lg">
                       View Communities
                     </Button>
                   </a>
