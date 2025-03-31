@@ -11,11 +11,11 @@ interface PropertyHeaderProps {
 
 export default function PropertyHeader({ property, isLoading = false }: PropertyHeaderProps) {
   return (
-    <header className="bg-primary text-white py-4 shadow-md">
+    <header className="bg-navy text-white py-4 shadow-md">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <BusIcon className="h-12 w-12 mr-3" />
+            <BusIcon className="h-12 w-12 mr-3 text-gold" />
             
             {isLoading ? (
               <div>
@@ -25,7 +25,7 @@ export default function PropertyHeader({ property, isLoading = false }: Property
             ) : (
               <div>
                 <h1 className="text-2xl font-bold">Peach State Casino Express</h1>
-                <p className="text-secondary-light text-lg">
+                <p className="text-white/80 text-lg">
                   {property?.name || "Book Your Trip"}
                 </p>
               </div>
@@ -33,12 +33,12 @@ export default function PropertyHeader({ property, isLoading = false }: Property
           </div>
           
           <Link href="/">
-            <Button variant="secondary" className="text-primary font-medium hidden md:flex">
+            <Button variant="secondary" className="bg-white text-navy font-medium hidden md:flex hover:bg-gold hover:text-navy">
               Back to Home
             </Button>
           </Link>
           
-          <button className="block md:hidden bg-primary-light p-2 rounded" aria-label="Menu">
+          <button className="block md:hidden bg-navy-light p-2 rounded" aria-label="Menu">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>

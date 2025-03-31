@@ -78,11 +78,11 @@ export default function BookingPage() {
         <ProgressSteps currentStep={1} />
         
         <div className="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-8">
-          <h2 className="text-3xl font-bold text-primary mb-6">Book Your Casino Shuttle</h2>
+          <h2 className="text-3xl font-bold text-navy mb-6">Book Your Casino Shuttle</h2>
           
           {/* Intro text */}
-          <div className="bg-blue-50 border-l-4 border-primary p-4 mb-8 rounded">
-            <p className="text-lg">Please select an available date for your trip to the casino. Each shuttle has a maximum capacity of 30 passengers.</p>
+          <div className="bg-gradient-to-r from-gold/10 to-white border-l-4 border-gold p-4 mb-8 rounded">
+            <p className="text-lg text-navy">Please select an available date for your trip to the casino. Each shuttle has a maximum capacity of 30 passengers.</p>
           </div>
           
           {/* Booking Content */}
