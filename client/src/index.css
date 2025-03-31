@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  /* Color Palette */
+  --gold-primary: 45 80% 60%;
+  --champagne-beige: 40 50% 90%;
+  --navy-blue: 220 70% 20%;
+  --navy-light: 220 70% 30%;
+  --coral-orange: 20 80% 65%;
+  --coral-light: 20 80% 90%;
+  
+  /* Semantic Colors */
+  --luxury: var(--gold-primary);
+  --elegant: var(--navy-blue);
+  --brand: var(--coral-orange);
+}
+
 @layer base {
   * {
     @apply border-border;
@@ -9,5 +24,65 @@
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
+  }
+
+  /* Gold & Champagne */
+  .bg-gold {
+    @apply bg-[hsl(var(--gold-primary))];
+  }
+
+  .text-gold {
+    @apply text-[hsl(var(--gold-primary))];
+  }
+  
+  .border-gold {
+    @apply border-[hsl(var(--gold-primary))];
+  }
+  
+  .bg-champagne {
+    @apply bg-[hsl(var(--champagne-beige))];
+  }
+  
+  .text-champagne {
+    @apply text-[hsl(var(--champagne-beige))];
+  }
+
+  /* Navy Blue */
+  .bg-navy {
+    @apply bg-[hsl(var(--navy-blue))];
+  }
+  
+  .bg-navy-light {
+    @apply bg-[hsl(var(--navy-light))];
+  }
+
+  .text-navy {
+    @apply text-[hsl(var(--navy-blue))];
+  }
+  
+  /* Coral Orange */
+  .bg-coral {
+    @apply bg-[hsl(var(--coral-orange))];
+  }
+
+  .text-coral {
+    @apply text-[hsl(var(--coral-orange))];
+  }
+  
+  .bg-coral-light {
+    @apply bg-[hsl(var(--coral-light))];
+  }
+
+  /* Buttons */
+  .btn-gold {
+    @apply bg-[hsl(var(--gold-primary))] hover:bg-[hsl(var(--gold-primary)_/_0.9)] text-navy font-medium;
+  }
+  
+  .btn-coral {
+    @apply bg-[hsl(var(--coral-orange))] hover:bg-[hsl(var(--coral-orange)_/_0.9)] text-white font-medium;
+  }
+  
+  .btn-navy {
+    @apply bg-[hsl(var(--navy-blue))] hover:bg-[hsl(var(--navy-light))] text-white font-medium;
   }
 }
