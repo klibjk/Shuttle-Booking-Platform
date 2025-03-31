@@ -27,7 +27,7 @@ export default function HomePage() {
           <div className="flex items-center gap-4">
             {/* Test menu - ONLY for development */}
             <Link href="/admin">
-              <Button variant="secondary" className="font-semibold flex items-center">
+              <Button variant="secondary" className="font-semibold flex items-center text-white bg-secondary hover:bg-secondary/80 shadow-md">
                 <Settings className="h-4 w-4 mr-2" />
                 Admin Dashboard
               </Button>
@@ -41,7 +41,7 @@ export default function HomePage() {
                 </div>
                 <Button 
                   variant="outline" 
-                  className="border-white text-white hover:text-primary"
+                  className="border-white text-white hover:bg-white hover:text-primary font-semibold"
                   onClick={() => logoutMutation.mutate()}
                   disabled={logoutMutation.isPending}
                 >
@@ -51,7 +51,7 @@ export default function HomePage() {
               </div>
             ) : (
               <Link href="/auth">
-                <Button variant="outline" className="border-white text-white hover:text-primary">
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-semibold">
                   Login
                 </Button>
               </Link>
@@ -92,7 +92,7 @@ export default function HomePage() {
                     </Link>
                   )}
                   <a href="#communities">
-                    <Button variant="outline" size="lg" className="text-lg px-8 py-6 border-white text-white font-bold hover:bg-white/20">
+                    <Button variant="outline" size="lg" className="text-lg px-8 py-6 border-white text-white font-bold hover:bg-white hover:text-primary shadow-lg">
                       View Communities
                     </Button>
                   </a>
