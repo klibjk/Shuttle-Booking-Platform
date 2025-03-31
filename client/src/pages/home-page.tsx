@@ -62,12 +62,12 @@ export default function HomePage() {
 
       <main className="flex-grow">
         {/* Hero section */}
-        <section className="bg-navy py-20 text-white">
+        <section className="bg-white py-20">
           <div className="container mx-auto px-4">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
               <div className="lg:w-1/2 text-center lg:text-left">
-                <h2 className="text-4xl lg:text-5xl font-bold mb-6">Luxury Casino Shuttle Service</h2>
-                <p className="text-xl mb-8">
+                <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-navy">Luxury Casino Shuttle Service</h2>
+                <p className="text-xl mb-8 text-navy/80">
                   Comfortable, convenient transportation from your active adult community 
                   to your favorite casino destinations in Georgia and North Carolina.
                 </p>
