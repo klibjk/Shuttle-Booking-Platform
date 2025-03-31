@@ -1,0 +1,92 @@
+Preliminary Design Report (PDR)
+Project Title:
+Peach State Casino Express – Shuttle Booking Platform
+
+Client:
+Peach State Casino Express
+Target Audience: Active Adults 55+ in Georgia & North Carolina
+Target Launch Date: May 15, 2025
+
+1. Project Overview
+Peach State Casino Express seeks a custom-built, mobile-friendly shuttle reservation system to serve multiple 55+ communities. Each property will be assigned a unique QR code leading to its own branded booking page. The platform must support trip reservations, payment processing, seat caps, and administrative tools such as manifests and live dashboards — all designed with simplicity and scalability in mind.
+
+2. Objectives
+Allow residents from different properties to book seats via property-specific QR code landing pages.
+
+Cap each trip at 30 paid riders, generate driver manifests, and automate payment handling via Stripe.
+
+Deliver a system that is intuitive, scalable, and user-friendly for seniors, with a clean UI, large fonts, and mobile-first design.
+
+Ensure the platform is fully owned and hosted by the client, with no recurring software fees beyond payment processing.
+
+3. Functional Requirements
+🌐 Property-Specific Booking Pages
+Each property will have a unique subpage (e.g., peachstatecasino.com/book/greenacres)
+
+Each subpage features:
+
+Date picker for available trips
+
+Trip descriptions or time slots
+
+Real-time seat availability
+
+Simple form: Name, phone, email
+
+Option for optional waitlist or “hold my seat” feature if trip is full
+
+Confirmation screen and email
+
+📋 Admin Dashboard
+Secure admin login
+
+Calendar or table view of all upcoming trips
+
+Enable/disable trip dates manually
+
+Track reservations per trip in real-time
+
+Auto-generate PDF or Excel manifest for each trip
+
+Manifest includes rider name, contact, payment status, property
+
+💳 Payments
+Integrated with Stripe for secure credit card payments
+
+Ability to handle refunds or manual overrides
+
+Payments deposited into BlueVine business bank account
+
+Optional coupon codes or promo support
+
+🔒 Booking Logic & Rules
+Auto-close booking X hours before trip time (configurable)
+
+Waitlist management:
+
+Notify next person if a seat opens
+
+Optional manual override
+
+Seat cap logic: auto-block further signups at 30
+
+🖥️ Other Technical Requirements
+Fully mobile-responsive design optimized for older users
+
+Simple UI with large buttons, contrasting colors, and readable fonts
+
+No monthly SaaS cost – 100% client-owned deployment
+
+Future-proof architecture to support:
+
+Additional vehicles or trip types
+
+More admin users or properties
+
+4. Proposed Tech Stack
+
+Frontend:	React (Next.js), Tailwind CSS
+Backend: Node.js with Express
+Database: PostgreSQL
+Admin Dashboard: React + Tailwind Admin Panel
+Payments: Stripe API Integration
