@@ -24,44 +24,44 @@ export default function TripDetails({ trip, property }: TripDetailsProps) {
   return (
     <Card className="border-2 border-neutral-200 rounded-xl mb-8">
       <CardContent className="p-6">
-        <h3 className="text-2xl font-bold text-navy mb-4">
+        <h3 className="text-2xl font-bold text-primary mb-4">
           Trip Details: {formattedDate}
         </h3>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <div>
-            <p className="font-semibold text-xl mb-2 text-navy">Departure</p>
+            <p className="font-semibold text-xl mb-2">Departure</p>
             <div className="flex items-center mb-4">
-              <Clock className="h-6 w-6 text-coral mr-2 flex-shrink-0" />
-              <span className="text-xl text-navy/80">{trip.departureTime}</span>
+              <Clock className="h-6 w-6 text-primary mr-2 flex-shrink-0" />
+              <span className="text-xl">{trip.departureTime}</span>
             </div>
             
             <div className="flex items-center">
-              <MapPin className="h-6 w-6 text-coral mr-2 flex-shrink-0" />
-              <span className="text-xl text-navy/80">
+              <MapPin className="h-6 w-6 text-primary mr-2 flex-shrink-0" />
+              <span className="text-xl">
                 {property?.meetingPoint || trip.departureLocation}
               </span>
             </div>
           </div>
           
           <div>
-            <p className="font-semibold text-xl mb-2 text-navy">Return</p>
+            <p className="font-semibold text-xl mb-2">Return</p>
             <div className="flex items-center mb-4">
-              <Clock className="h-6 w-6 text-coral mr-2 flex-shrink-0" />
-              <span className="text-xl text-navy/80">{trip.returnTime}</span>
+              <Clock className="h-6 w-6 text-primary mr-2 flex-shrink-0" />
+              <span className="text-xl">{trip.returnTime}</span>
             </div>
             
             <div className="flex items-center">
-              <MapPin className="h-6 w-6 text-coral mr-2 flex-shrink-0" />
-              <span className="text-xl text-navy/80">{trip.returnLocation}</span>
+              <MapPin className="h-6 w-6 text-primary mr-2 flex-shrink-0" />
+              <span className="text-xl">{trip.returnLocation}</span>
             </div>
           </div>
         </div>
         
-        <div className="p-4 bg-white border border-gold/30 rounded-lg flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div className="p-4 bg-neutral-100 rounded-lg flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div className="flex items-center">
-            <Users className="h-6 w-6 text-coral mr-2 flex-shrink-0" />
-            <span className="text-xl font-medium text-navy">
+            <Users className="h-6 w-6 text-primary mr-2 flex-shrink-0" />
+            <span className="text-xl font-medium">
               Available Seats: {availableSeats}
             </span>
             {availableSeats <= 5 && availableSeats > 0 && (
@@ -72,10 +72,10 @@ export default function TripDetails({ trip, property }: TripDetailsProps) {
             )}
           </div>
           <div>
-            <span className="text-xl font-semibold text-navy">
+            <span className="text-xl font-semibold">
               {formatCurrency(trip.pricePerSeat / 100)}
             </span>
-            <span className="text-lg text-navy/60 ml-1">per person</span>
+            <span className="text-lg text-neutral-600 ml-1">per person</span>
           </div>
         </div>
       </CardContent>

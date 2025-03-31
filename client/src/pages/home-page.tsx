@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import Footer from "@/components/layout/footer";
 import { MapPin, CalendarDays, Bus, ChevronRight, LogOut, User, Settings } from "lucide-react";
 import { BusIcon, CasinoIcon, SeniorIcon } from "@/components/ui/icons";
-import casinoBusImage from "@/assets/casino-bus.png";
 
 export default function HomePage() {
   const { user, logoutMutation } = useAuth();
@@ -17,17 +16,17 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="bg-navy text-white py-4 shadow-md">
+      <header className="bg-primary text-white py-4 shadow-md">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div className="flex items-center">
-            <BusIcon className="h-8 w-8 mr-3 text-gold" />
+            <BusIcon className="h-8 w-8 mr-3" />
             <h1 className="text-2xl font-bold">Peach State Casino Express</h1>
           </div>
 
           <div className="flex items-center gap-4">
             {/* Test menu - ONLY for development */}
             <Link href="/admin">
-              <Button variant="secondary" className="font-semibold flex items-center bg-gold text-navy">
+              <Button variant="secondary" className="font-semibold flex items-center">
                 <Settings className="h-4 w-4 mr-2" />
                 Admin Dashboard
               </Button>
@@ -41,7 +40,7 @@ export default function HomePage() {
                 </div>
                 <Button 
                   variant="outline" 
-                  className="border-gold text-white hover:bg-gold hover:text-navy"
+                  className="border-white text-white hover:text-primary"
                   onClick={() => logoutMutation.mutate()}
                   disabled={logoutMutation.isPending}
                 >
@@ -51,7 +50,7 @@ export default function HomePage() {
               </div>
             ) : (
               <Link href="/auth">
-                <Button variant="outline" className="border-gold text-white hover:bg-gold hover:text-navy">
+                <Button variant="outline" className="border-white text-white hover:text-primary">
                   Login
                 </Button>
               </Link>
@@ -62,40 +61,28 @@ export default function HomePage() {
 
       <main className="flex-grow">
         {/* Hero section */}
-        <section className="bg-white py-20">
+        <section className="bg-gradient-to-b from-primary-dark to-primary py-20 text-white">
           <div className="container mx-auto px-4">
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
-              <div className="lg:w-1/2 text-center lg:text-left">
-                <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-navy">Luxury Casino Shuttle Service</h2>
-                <p className="text-xl mb-8 text-navy/80">
-                  Comfortable, convenient transportation from your active adult community 
-                  to your favorite casino destinations in Georgia and North Carolina.
-                </p>
-                <div className="flex flex-wrap justify-center lg:justify-start gap-4">
-                  {properties && properties.length > 0 && (
-                    <Link href={`/book/${properties[0].slug}`}>
-                      <Button size="lg" className="text-lg px-8 py-6 btn-gold">
-                        Book Your Trip Now
-                        <ChevronRight className="ml-2 h-5 w-5" />
-                      </Button>
-                    </Link>
-                  )}
-                  <a href="#communities">
-                    <Button variant="outline" size="lg" className="text-lg px-8 py-6 border-gold text-gold hover:bg-gold/10">
-                      View Communities
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-5xl font-bold mb-6">Luxury Casino Shuttle Service</h2>
+              <p className="text-xl mb-8">
+                Comfortable, convenient transportation from your active adult community 
+                to your favorite casino destinations in Georgia and North Carolina.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                {properties && properties.length > 0 && (
+                  <Link href={`/book/${properties[0].slug}`}>
+                    <Button size="lg" className="text-lg px-8 py-6 bg-secondary hover:bg-secondary-dark">
+                      Book Your Trip Now
+                      <ChevronRight className="ml-2 h-5 w-5" />
                     </Button>
-                  </a>
-                </div>
-              </div>
-              <div className="lg:w-1/2 mt-8 lg:mt-0">
-                <div className="relative">
-                  <div className="absolute -inset-4 bg-gold/30 rounded-lg blur-xl"></div>
-                  <img 
-                    src={casinoBusImage} 
-                    alt="Peach State Casino Express shuttle bus" 
-                    className="relative rounded-lg shadow-2xl w-full max-w-lg mx-auto"
-                  />
-                </div>
+                  </Link>
+                )}
+                <a href="#communities">
+                  <Button variant="outline" size="lg" className="text-lg px-8 py-6 border-white text-white hover:bg-white/10">
+                    View Communities
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
@@ -104,35 +91,35 @@ export default function HomePage() {
         {/* Features section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <h3 className="text-3xl font-bold text-center text-navy mb-12">Why Choose Our Service</h3>
+            <h3 className="text-3xl font-bold text-center text-primary mb-12">Why Choose Our Service</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
               <div className="text-center">
-                <div className="bg-gold/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <BusIcon className="h-10 w-10 text-navy" />
+                <div className="bg-primary/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <BusIcon className="h-10 w-10 text-primary" />
                 </div>
-                <h4 className="text-xl font-bold mb-3 text-navy">Comfortable Transportation</h4>
-                <p className="text-navy/80">
+                <h4 className="text-xl font-bold mb-3">Comfortable Transportation</h4>
+                <p className="text-neutral-600">
                   Luxury buses with comfortable seating, climate control, and onboard amenities for a pleasant journey.
                 </p>
               </div>
               
               <div className="text-center">
-                <div className="bg-gold/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <SeniorIcon className="h-10 w-10 text-navy" />
+                <div className="bg-primary/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <SeniorIcon className="h-10 w-10 text-primary" />
                 </div>
-                <h4 className="text-xl font-bold mb-3 text-navy">Community Focused</h4>
-                <p className="text-navy/80">
+                <h4 className="text-xl font-bold mb-3">Community Focused</h4>
+                <p className="text-neutral-600">
                   Designed specifically for active adult communities with convenient pickup locations.
                 </p>
               </div>
               
               <div className="text-center">
-                <div className="bg-gold/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <CasinoIcon className="h-10 w-10 text-navy" />
+                <div className="bg-primary/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <CasinoIcon className="h-10 w-10 text-primary" />
                 </div>
-                <h4 className="text-xl font-bold mb-3 text-navy">Casino Destinations</h4>
-                <p className="text-navy/80">
+                <h4 className="text-xl font-bold mb-3">Casino Destinations</h4>
+                <p className="text-neutral-600">
                   Regular trips to popular casino destinations with ample time for gaming and entertainment.
                 </p>
               </div>
@@ -141,9 +128,9 @@ export default function HomePage() {
         </section>
 
         {/* Community section */}
-        <section id="communities" className="py-16 bg-white">
+        <section id="communities" className="py-16 bg-neutral-50">
           <div className="container mx-auto px-4">
-            <h3 className="text-3xl font-bold text-center text-navy mb-12">Our Partner Communities</h3>
+            <h3 className="text-3xl font-bold text-center text-primary mb-12">Our Partner Communities</h3>
             
             {isLoading ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -161,29 +148,29 @@ export default function HomePage() {
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {properties?.map((property) => (
-                  <Card key={property.id} className="border-2 hover:border-gold shadow-md hover:shadow-lg transition-all">
-                    <CardHeader className="pb-2 border-b bg-gradient-to-r from-gold/10 to-white">
-                      <CardTitle className="text-xl font-bold text-navy">{property.name}</CardTitle>
+                  <Card key={property.id} className="border-2 hover:border-primary transition-colors">
+                    <CardHeader className="pb-2">
+                      <CardTitle className="text-xl font-bold text-primary">{property.name}</CardTitle>
                     </CardHeader>
                     <CardContent className="pt-2">
                       <div className="flex items-start mb-4">
-                        <MapPin className="h-5 w-5 text-coral mt-1 mr-2 flex-shrink-0" />
-                        <p className="text-navy/70">
+                        <MapPin className="h-5 w-5 text-primary mt-1 mr-2 flex-shrink-0" />
+                        <p className="text-neutral-600">
                           {property.address}, {property.city}, {property.state} {property.zipCode}
                         </p>
                       </div>
                       <div className="flex items-center mb-4">
-                        <Bus className="h-5 w-5 text-coral mr-2 flex-shrink-0" />
-                        <p className="text-navy/70">Pickup at {property.meetingPoint}</p>
+                        <Bus className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
+                        <p className="text-neutral-600">Pickup at {property.meetingPoint}</p>
                       </div>
                       <div className="flex items-center mb-6">
-                        <CalendarDays className="h-5 w-5 text-coral mr-2 flex-shrink-0" />
-                        <p className="text-navy/70">Regular trips available</p>
+                        <CalendarDays className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
+                        <p className="text-neutral-600">Regular trips available</p>
                       </div>
                       
                       <div className="flex gap-2">
                         <Link href={`/book/${property.slug}`} className="flex-1">
-                          <Button className="w-full btn-coral">
+                          <Button className="w-full">
                             Book a Trip
                             <ChevronRight className="h-4 w-4 ml-2" />
                           </Button>
@@ -196,13 +183,13 @@ export default function HomePage() {
             )}
             
             {/* For testing: Direct QR scan simulation */}
-            <div className="mt-12 p-6 border-2 border-dashed border-gold/40 rounded-lg bg-gradient-to-r from-gold/5 to-white">
-              <h4 className="text-xl font-bold mb-4 text-center text-navy">Testing: Direct QR Code Links</h4>
-              <p className="text-center mb-6 text-navy/70">These links simulate the QR codes that seniors would scan at their communities</p>
+            <div className="mt-12 p-6 border-2 border-dashed border-primary/50 rounded-lg bg-primary/5">
+              <h4 className="text-xl font-bold mb-4 text-center">Testing: Direct QR Code Links</h4>
+              <p className="text-center mb-6">These links simulate the QR codes that seniors would scan at their communities</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {properties?.map((property) => (
                   <Link key={property.id} href={`/book/${property.slug}`}>
-                    <Button variant="outline" className="w-full border-gold text-navy hover:bg-gold/10">
+                    <Button variant="outline" className="w-full">
                       {property.name} QR Link
                     </Button>
                   </Link>

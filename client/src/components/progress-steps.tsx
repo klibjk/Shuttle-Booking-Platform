@@ -21,7 +21,7 @@ export default function ProgressSteps({
             key={step.number}
             className={cn(
               "font-semibold text-lg",
-              currentStep === step.number ? "text-navy" : "text-neutral-400"
+              currentStep === step.number ? "text-primary" : "text-neutral-400"
             )}
           >
             {step.label}
@@ -30,7 +30,7 @@ export default function ProgressSteps({
       </div>
       <div className="h-3 bg-neutral-200 rounded-full overflow-hidden">
         <div 
-          className="h-full bg-coral rounded-full transition-all duration-300 ease-in-out"
+          className="h-full bg-primary rounded-full transition-all duration-300 ease-in-out"
           style={{ width: `${(currentStep / steps.length) * 100}%` }}
         />
       </div>

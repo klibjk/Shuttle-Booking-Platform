@@ -73,7 +73,7 @@ export default function BookingCalendar({
   return (
     <div className="bg-white rounded-lg shadow p-4">
       <div className="flex justify-between items-center mb-4">
-        <h3 className="text-xl font-semibold text-navy">
+        <h3 className="text-xl font-semibold text-primary">
           {format(currentMonth, "MMMM yyyy")}
         </h3>
         
@@ -117,7 +117,7 @@ export default function BookingCalendar({
               className={cn(
                 "text-xl border rounded-lg p-2 flex items-center justify-center aspect-square",
                 isAvailable ? "hover:bg-neutral-100 cursor-pointer" : "text-neutral-400 cursor-not-allowed opacity-50",
-                isSelected && "bg-coral text-white border-coral hover:bg-coral",
+                isSelected && "bg-primary text-white border-primary hover:bg-primary",
                 !isSameMonth(day, currentMonth) && "opacity-30"
               )}
               disabled={!isAvailable}
