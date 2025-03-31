@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/card";
 import { Booking, Property, Trip } from "@shared/schema";
 import { apiRequest } from "@/lib/queryClient";
 import { formatCurrency } from "@/lib/utils";
-import { Footer } from "@/components/layout/footer";
+import Footer from "@/components/layout/footer";
 import { Loader2 } from "lucide-react";
 
 // Stripe setup

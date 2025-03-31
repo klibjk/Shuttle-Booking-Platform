@@ -7,7 +7,7 @@ import { useAuth } from "@/hooks/use-auth";
 import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis, Tooltip } from "recharts";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { IconButton } from "@/components/ui/icons";
-import { Footer } from "@/components/layout/footer";
+import Footer from "@/components/layout/footer";
 import { format } from "date-fns";
 import { 
   Bus, 

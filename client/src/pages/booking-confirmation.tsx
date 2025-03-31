@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
 import { PropertyHeader } from "@/components/property-header";
 import { ProgressSteps } from "@/components/progress-steps";
-import { Footer } from "@/components/layout/footer";
+import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Booking, Property, Trip } from "@shared/schema";

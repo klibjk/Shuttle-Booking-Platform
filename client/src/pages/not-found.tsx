@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { AlertCircle, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { Footer } from "@/components/layout/footer";
+import Footer from "@/components/layout/footer";
 
 export default function NotFound() {
   return (

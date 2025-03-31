@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { BusIcon } from "@/components/ui/icons";
 import { MapPin, Phone, Mail } from "lucide-react";
 
-export default function Footer() {
+function Footer() {
   return (
     <footer className="bg-primary-dark text-white py-8">
       <div className="container mx-auto px-4">
@@ -73,4 +73,4 @@ export default function Footer() {
   );
 }
 
-export { Footer };
+export default Footer;
