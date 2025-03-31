@@ -41,13 +41,13 @@ export default function BookingConfirmation() {
       <main className="flex-grow container mx-auto px-4 py-6 md:py-8">
         <ProgressSteps currentStep={3} />
         
-        <Card className="border-0 shadow-lg max-w-4xl mx-auto overflow-hidden">
-          <div className="bg-primary text-white p-6 md:p-8">
+        <Card className="border-2 border-gold/30 shadow-lg max-w-4xl mx-auto overflow-hidden">
+          <div className="bg-white p-6 md:p-8 border-b border-gold/20">
             <div className="flex items-center mb-4">
-              <CheckCircle className="h-10 w-10 mr-3" />
-              <h2 className="text-3xl font-bold">Booking Confirmed!</h2>
+              <CheckCircle className="h-10 w-10 mr-3 text-coral" />
+              <h2 className="text-3xl font-bold text-navy">Booking Confirmed!</h2>
             </div>
-            <p className="text-xl opacity-90">
+            <p className="text-xl text-navy/80">
               Thank you for booking with Peach State Casino Express. An email confirmation has been sent to your inbox.
             </p>
           </div>
@@ -55,70 +55,70 @@ export default function BookingConfirmation() {
           <CardContent className="p-6 md:p-8">
             {!booking || !trip ? (
               <div className="animate-pulse">
-                <div className="h-10 bg-gray-200 rounded mb-4 w-1/2"></div>
-                <div className="h-6 bg-gray-200 rounded mb-2"></div>
-                <div className="h-6 bg-gray-200 rounded mb-6 w-3/4"></div>
+                <div className="h-10 bg-neutral-200 rounded mb-4 w-1/2"></div>
+                <div className="h-6 bg-neutral-200 rounded mb-2"></div>
+                <div className="h-6 bg-neutral-200 rounded mb-6 w-3/4"></div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="h-24 bg-gray-200 rounded"></div>
-                  <div className="h-24 bg-gray-200 rounded"></div>
-                  <div className="h-24 bg-gray-200 rounded"></div>
-                  <div className="h-24 bg-gray-200 rounded"></div>
+                  <div className="h-24 bg-neutral-200 rounded"></div>
+                  <div className="h-24 bg-neutral-200 rounded"></div>
+                  <div className="h-24 bg-neutral-200 rounded"></div>
+                  <div className="h-24 bg-neutral-200 rounded"></div>
                 </div>
               </div>
             ) : (
               <>
-                <h3 className="text-2xl font-bold text-primary mb-2">Booking Details</h3>
-                <p className="text-lg text-neutral-600 mb-8">Booking Reference: #{booking.id}</p>
+                <h3 className="text-2xl font-bold text-navy mb-2">Booking Details</h3>
+                <p className="text-lg text-navy/60 mb-8">Booking Reference: #{booking.id}</p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                  <div className="bg-neutral-50 p-5 rounded-lg">
+                  <div className="bg-white p-5 rounded-lg border border-gold/20">
                     <div className="flex items-start">
-                      <Calendar className="h-6 w-6 text-primary mt-1 mr-3 flex-shrink-0" />
+                      <Calendar className="h-6 w-6 text-coral mt-1 mr-3 flex-shrink-0" />
                       <div>
-                        <h4 className="text-lg font-semibold mb-1">Trip Date</h4>
-                        <p className="text-lg">{new Date(trip.departureDate).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })}</p>
+                        <h4 className="text-lg font-semibold mb-1 text-navy">Trip Date</h4>
+                        <p className="text-lg text-navy/80">{new Date(trip.departureDate).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })}</p>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="bg-neutral-50 p-5 rounded-lg">
+                  <div className="bg-white p-5 rounded-lg border border-gold/20">
                     <div className="flex items-start">
-                      <MapPin className="h-6 w-6 text-primary mt-1 mr-3 flex-shrink-0" />
+                      <MapPin className="h-6 w-6 text-coral mt-1 mr-3 flex-shrink-0" />
                       <div>
-                        <h4 className="text-lg font-semibold mb-1">Meeting Point</h4>
-                        <p className="text-lg">{property?.meetingPoint || trip.departureLocation}</p>
+                        <h4 className="text-lg font-semibold mb-1 text-navy">Meeting Point</h4>
+                        <p className="text-lg text-navy/80">{property?.meetingPoint || trip.departureLocation}</p>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="bg-neutral-50 p-5 rounded-lg">
+                  <div className="bg-white p-5 rounded-lg border border-gold/20">
                     <div className="flex items-start">
-                      <Clock className="h-6 w-6 text-primary mt-1 mr-3 flex-shrink-0" />
+                      <Clock className="h-6 w-6 text-coral mt-1 mr-3 flex-shrink-0" />
                       <div>
-                        <h4 className="text-lg font-semibold mb-1">Schedule</h4>
-                        <p className="text-lg">Departure: {trip.departureTime}</p>
-                        <p className="text-lg">Return: {trip.returnTime}</p>
+                        <h4 className="text-lg font-semibold mb-1 text-navy">Schedule</h4>
+                        <p className="text-lg text-navy/80">Departure: {trip.departureTime}</p>
+                        <p className="text-lg text-navy/80">Return: {trip.returnTime}</p>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="bg-neutral-50 p-5 rounded-lg">
+                  <div className="bg-white p-5 rounded-lg border border-gold/20">
                     <div className="flex items-start">
-                      <Users className="h-6 w-6 text-primary mt-1 mr-3 flex-shrink-0" />
+                      <Users className="h-6 w-6 text-coral mt-1 mr-3 flex-shrink-0" />
                       <div>
-                        <h4 className="text-lg font-semibold mb-1">Reservation</h4>
-                        <p className="text-lg">{booking.customerName}</p>
-                        <p className="text-lg">Seats: {booking.numberOfSeats}</p>
-                        <p className="text-lg font-semibold">Total: {formatCurrency(booking.totalAmount / 100)}</p>
+                        <h4 className="text-lg font-semibold mb-1 text-navy">Reservation</h4>
+                        <p className="text-lg text-navy/80">{booking.customerName}</p>
+                        <p className="text-lg text-navy/80">Seats: {booking.numberOfSeats}</p>
+                        <p className="text-lg font-semibold text-coral">Total: {formatCurrency(booking.totalAmount / 100)}</p>
                       </div>
                     </div>
                   </div>
                 </div>
                 
-                <div className="bg-yellow-50 border-l-4 border-secondary p-4 mb-8 rounded">
-                  <h4 className="text-lg font-semibold mb-2">Important Information</h4>
-                  <ul className="space-y-2 text-lg">
+                <div className="bg-gold/10 border-l-4 border-gold p-4 mb-8 rounded">
+                  <h4 className="text-lg font-semibold mb-2 text-navy">Important Information</h4>
+                  <ul className="space-y-2 text-lg text-navy/80">
                     <li>Please arrive 15 minutes before departure time.</li>
                     <li>Bring a valid photo ID with you.</li>
                     <li>Food and non-alcoholic beverages are allowed on the shuttle.</li>
