@@ -48,7 +48,7 @@ export default function BookingConfirmation() {
               <h2 className="text-3xl font-bold">Booking Confirmed!</h2>
             </div>
             <p className="text-xl opacity-90">
-              Thank you for booking with Peach State Casino Express. An email confirmation has been sent to your inbox.
+              Thank you for booking with Shuttle Booking Platform. An email confirmation has been sent to your inbox.
             </p>
           </div>
           

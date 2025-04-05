@@ -157,7 +157,7 @@ export default function AuthPage() {
         <div className="container mx-auto px-4">
           <div className="flex items-center">
             <BusIcon className="h-10 w-10 mr-3" />
-            <h1 className="text-2xl font-bold">Peach State Casino Express</h1>
+            <h1 className="text-2xl font-bold">Shuttle Booking Platform</h1>
           </div>
         </div>
       </header>
@@ -174,7 +174,7 @@ export default function AuthPage() {
                 <CardHeader>
                   <CardTitle className="text-2xl text-primary">Welcome Back</CardTitle>
                   <CardDescription className="text-lg">
-                    Sign in to your Peach State Casino Express account
+                    Sign in to your Shuttle Booking Platform account
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -196,7 +196,7 @@ export default function AuthPage() {
           </div>
 
           <div className="bg-primary/10 p-8 rounded-lg hidden md:block">
-            <h2 className="text-3xl font-bold text-primary mb-6">Peach State Casino Express</h2>
+            <h2 className="text-3xl font-bold text-primary mb-6">Shuttle Booking Platform</h2>
             <div className="space-y-6 text-lg">
               <div className="flex items-start">
                 <CasinoIcon className="h-8 w-8 text-primary mr-3 mt-1 flex-shrink-0" />

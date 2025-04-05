@@ -24,7 +24,7 @@ export default function PropertyHeader({ property, isLoading = false }: Property
               </div>
             ) : (
               <div>
-                <h1 className="text-2xl font-bold">Peach State Casino Express</h1>
+                <h1 className="text-2xl font-bold">Shuttle Booking Platform</h1>
                 <p className="text-secondary-light text-lg">
                   {property?.name || "Book Your Trip"}
                 </p>

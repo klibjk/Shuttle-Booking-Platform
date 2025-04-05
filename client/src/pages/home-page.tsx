@@ -21,7 +21,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div className="flex items-center">
             <BusIcon className="h-8 w-8 mr-3" />
-            <h1 className="text-2xl font-bold">Peach State Casino Express</h1>
+            <h1 className="text-2xl font-bold">Shuttle Booking Platform</h1>
           </div>
 
           <div className="flex items-center gap-4">
@@ -68,7 +68,7 @@ export default function HomePage() {
           <div className="w-full h-[500px] relative">
             <img 
               src={casinoBusImage} 
-              alt="Peach State Casino Express Bus" 
+              alt="Shuttle Booking Platform Bus" 
               className="w-full h-full object-cover"
             />
           </div>

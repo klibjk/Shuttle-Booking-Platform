@@ -1,8 +1,8 @@
-# Peach State Casino Express Shuttle Booking Platform
+# Shuttle Booking Platform
 
-A mobile-friendly shuttle booking platform for Peach State Casino Express, designed to provide a seamless and visually appealing transportation booking experience with advanced seat management and administrative tools.
+A mobile-friendly shuttle booking platform designed to provide a seamless and visually appealing transportation booking experience with advanced seat management and administrative tools.
 
-![Peach State Casino Express](/attached_assets/image_1743416853012.png)
+![Shuttle Booking Platform](/attached_assets/image_1743416853012.png)
 
 ## Key Features
 

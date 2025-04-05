@@ -10,10 +10,10 @@ function Footer() {
           <div>
             <div className="flex items-center mb-4">
               <BusIcon className="h-8 w-8 mr-2" />
-              <h3 className="text-xl font-bold">Peach State Casino Express</h3>
+              <h3 className="text-xl font-bold">Shuttle Booking Platform</h3>
             </div>
             <p className="mb-4">Luxury shuttle service for active adult communities in Georgia and North Carolina.</p>
-            <p>© {new Date().getFullYear()} Peach State Casino Express. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Shuttle Booking Platform. All rights reserved.</p>
           </div>
           
           <div>
@@ -24,7 +24,7 @@ function Footer() {
             </p>
             <p className="flex items-center mb-2">
               <Mail className="h-5 w-5 mr-2 flex-shrink-0" />
-              info@peachstatecasino.com
+              info@shuttlebooking.com
             </p>
             <p className="flex items-start mb-2">
               <MapPin className="h-5 w-5 mr-2 flex-shrink-0 mt-1" />
